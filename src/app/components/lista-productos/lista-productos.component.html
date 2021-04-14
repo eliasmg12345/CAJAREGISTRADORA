@@ -1,0 +1,15 @@
+<h3>{{titulot}}</h3>
+<!-- A9     Mostrando  con una maquetacion...Voy a maquetar UNO  y luego lo repito
+dandole estilos en el css-->
+<!-- A10 iterando el array con *ngFor 
+    luego para hacer que el div producto sea pulsable usamos el evento click
+pasandole el evento prod porque es mas comodo tranjar con el prod entero que andar
+pasandole indice o arrays etc jajaja ,....ahora vamos al ts A11-->
+<div class="productos">
+    <div class="producto" *ngFor="let prod of productosO" (click)="onClick(prod)">
+        <!-- este atributo al recibir una variable tiene que ir entre corchetes -->
+        <img [src]="prod.imgUrl" >
+        <p>{{prod.nombre}}</p>
+        <p>{{prod.cantidad}}</p>
+    </div>
+</div>

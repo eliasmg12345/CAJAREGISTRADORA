@@ -1,0 +1,19 @@
+h1{
+    text-align: center;
+}
+.container{
+    width: 60%;
+    margin: 30px auto 0 auto;
+    /* elementos tanto iz como derecha dentro del container
+    para que se coloquen de un lado de otro se coloque en fila */
+    display: flex;  
+}
+.izq{
+    width: 65%;
+    padding: 10px;
+
+}
+.der{
+    width: 35%;
+    padding: 10px;
+}
