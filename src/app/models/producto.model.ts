@@ -6,9 +6,16 @@ export class Producto{
     nombre:string;
     imgUrl:string;
     cantidad:number;
+
+    //B1 haremos que al seleccionar no se apilen los valores en la visualizacion
+    //creamos cant y la incializamos con cero
+    //vamos a component.ts B2
+    cant:number;
+
     constructor(pNombre:string,pimgUrl:string,pCantidad:number){
         this.nombre=pNombre;
         this.imgUrl=pimgUrl;
         this.cantidad=pCantidad;
+        this.cant=0;
     }
 }

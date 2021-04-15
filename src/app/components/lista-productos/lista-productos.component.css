@@ -8,6 +8,7 @@ h3{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
 }
 .producto{
     width: 24%;
@@ -23,6 +24,5 @@ h3{
 .producto p{
     margin: 5px auto;
     text-align: center; 
-
-
+    
 }

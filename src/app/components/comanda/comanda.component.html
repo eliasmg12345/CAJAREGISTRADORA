@@ -1,1 +1,25 @@
-<p>comanda works!</p>
+<h3>Comanda  </h3>
+
+<!-- 
+    A21 hemos visto que aprate de utilizar variables se pueden utilizar metodos
+    yo dentro de la comanda conozco un array de productos   
+    puedo crear un metodo que me calcule el total vamos al ts A22
+-->
+<p>Total: {{calculaTotal()}}</p>
+
+<!--
+    A20 Simplemente vamos a intetar iterar todos los prod de la comanda 
+    recuerdo que ese array estoy recibiendo del Padre seguira la misma marcha
+    el *ngFor actuara en consecuencia 
+-->
+
+<div class="productos">
+    <!-- A23 para bollar vamos a hacer clicables a estas marcas  por lo tanto lo que vamos
+    a meter aqui es (click) planteando que le vamos a pasar por parametro
+    lo que vamos a meter es el indice entonces en el *ngFor creamos otra variable
+    indice cuyo valor es index ojo muy importante el index   ....ahora el onclickBorrar vamos al ts A24-->
+    <div class="producto" *ngFor="let pro of arrProductoss; let indice=index" (click)="onClickBorrar(indice)">
+        <!-- B3 aumetamos la X cant y que multiplique su cantidad  -->
+        <p>{{pro.nombre}} x {{pro.cant}} - {{pro.cantidad *pro.cant}}</p>
+    </div>
+</div>

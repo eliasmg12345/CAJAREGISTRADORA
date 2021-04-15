@@ -16,7 +16,7 @@ export class ListaProductosComponent implements OnInit {
   // en comphtml ya puedo definir el Input productosO y a este le pasare el array 
   // de Oficina y el array de Acceso
 
-  @Input() productosO:Producto[]; 
+  @Input() productosO:Producto[];  
 
   // A12 creamos el evento Output que le llamo productoSeleccionado indicando la 
   // accion que esta emitiendo el output y siempre es de tiopo EventEmitter y decrile que es
@@ -31,10 +31,13 @@ export class ListaProductosComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // A11 tenemso que tenre en cuenta que los dos componetnes hacen lo mismo
+  // A11 tenemso que tener en cuenta que los dos componetnes hacen lo mismo
   // el siguiente paso es informar al padre  que componente se ha pasado se usa Output
+  //no olvidemos que el OUTPUT simpre tiene la misma estructura .... el tipo que vamos emitir y el nombre
+  //lugo siempre lo inicializamos y lo usamos donde nos de la gana
   onClick(pProducto){
-    // A13
+    // A13 this.productoSeleccionado emito el preducto que me esta llegando atravez del
+    //parentesis el que yo he clicado............Por lo tanto en el html del padre A14
     this.productoSeleccionado.emit(pProducto);
   }
 

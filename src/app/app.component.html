@@ -14,11 +14,17 @@ un array-->
   Input que reciba ese array nos vamos a ts lista-->
   <!-- A8 pasando los array ...ojo que se le pone corchetes porque lo que 
   se le pasa es una variable... si no pusiera cochetes estaria pasando un string -->
-    <app-lista-productos titulot="Oficina" [productosO]="arrOficina"></app-lista-productos>
-    <app-lista-productos titulot="Acesorios" [productosO]="arrAcceso"></app-lista-productos>
+  <!--A14 estas dos listas de profuctos ya me estan permitiendo engancharme a este
+  evento productoSeleccionado por lo tanto que se ejecute un metodo por ejemplo on ProductoSeleccionado
+  vital importante el $event porque me va arecuperar el evento que se ha seleccionado-->
+    <app-lista-productos titulot="Oficina" [productosO]="arrOficina" (productoSeleccionado)="onProductoSeleccionado($event)"></app-lista-productos>
+    <app-lista-productos titulot="Acesorios" [productosO]="arrAcceso" (productoSeleccionado)="onProductoSeleccionado($event)"></app-lista-productos>
   </div>
 
   <div class="der">
-    <app-comanda></app-comanda>
+    <!--A19 oye tu propiedad arrProductoss la voy a rellenar con los datos que reciba de
+    productosSeleccionados luego te lo voy a pasar a (arrProductoss) para que tu iteres
+  y hagas lo que tu quieres para visualizar vamos al comanda.html A20 -->
+    <app-comanda [arrProductoss]="productosSeleccionados"></app-comanda>
   </div>
 </div>
